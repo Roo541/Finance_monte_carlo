@@ -1,0 +1,22 @@
+This folder is in regards to populating data for a MySQL dB.
+
+two schemas used in dB
+
+schema 1:
+
+CREATE TABLE company_id_sector (company_id int, ticker varchar(20), sector varchar(50) ) ;
+
+
+schema 2:
+
+CREATE TABLE financial_data (company_id int, date date, open float, high float
+                              low float, close float, adj_close float, volume float,
+                               market_cap float, EPS float, pe_ratio float, pb_ratio float, ps_ratio float) );
+
+Scripts in this folder utilize EOD historical API (subscribed product) to populate schema 2. Scripts are neccessary in extracting fundamental data such as 
+market_cap, EPS, pe_ratio, pb_ratio, and ps_ratio. Fundamental data is derived through EOD data of 10Q financials for desired companies. 
+
+
+Purpose:
+Create dB of usefull fundamental parameters in order to use dB for monte carlo simulation in idendtifiying which parameters of the 5 correlate to high alpha. 
+Main focus is to possibly find parameters in which a strategy can be created. 
