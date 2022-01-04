@@ -1,0 +1,15 @@
+This folder consists
+  -monte carlo
+  -strategy creator
+  -backtest
+
+Monte carlo script ties together strategy creator and backtest scripts. 
+p1-p5 are parameters which will have randomized weighting. This randomized weighting goes into strategy creator script 
+and creates unique signals which will then go into backtest script. Results will go back to monte carlo script and 
+be documented. ex: p1 =0.3, p2=0.5, p3=0.5, p4=0.5, p5=0.5 -> alpha = 0.17 (alpha is return for unique strategy)
+
+Once results are generated user can analyze returns and their respective parameters.
+
+F(x) = R(p1,p2,p3,p4,p5) 
+where p1-p5 are weights which affect the unique strategy outputed. 
+  
